@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cloud Event RSVP Tracker</title>
+  <meta name="description" content="Real-time cloud-based event planning and RSVP tracking platform." />
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand" onclick="location.hash = '#/events'">
+      <span class="logo">☁️</span>
+      <span>Cloud Event RSVP Tracker</span>
+    </div>
+    <nav id="nav" class="nav"></nav>
+    <div class="topbar-right">
+      <button id="notif-btn" class="icon-btn" title="Notifications">
+        🔔<span id="notif-badge" class="badge hidden">0</span>
+      </button>
+      <span id="whoami" class="whoami"></span>
+    </div>
+  </header>
+
+  <main id="app" class="container"></main>
+
+  <div id="toast" class="toast hidden"></div>
+
+  <footer class="footer">
+    <span>Real-Time Cloud-Based Event Planning &amp; RSVP Tracker</span>
+    <span id="conn-status" class="conn">● offline</span>
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/realtime.js"></script>
+  <script src="/js/views.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
